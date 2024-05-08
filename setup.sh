@@ -38,7 +38,7 @@ fi
 
 # Add an alias
 if ! grep -q 'alias alpine-docker=' "$PROFILE"; then
-	echo "alias alpine-docker='docker run -it -v $HOME:/workspace $IMAGE_NAME'" >> $PROFILE
+	echo -e "\nalias alpine-docker=\"$HOME/alpine-valgrind-docker/run-alpine-docker.sh\"\n" >> $PROFILE
 	echo "Created alias 'alpine-docker'."
 	echo "source $PROFILE"
 else
