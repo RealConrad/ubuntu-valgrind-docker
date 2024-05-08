@@ -2,18 +2,18 @@ FROM ubuntu:latest
 
 # Update and install necessary packages
 RUN apt-get update && apt-get upgrade -y && \
-    apt-get install -y \
-        bash \
-        valgrind \
-        vim \
-        build-essential \
-        git \
-        curl \
-        wget \
-        tar \
-        gzip \
-        unzip \
-        ca-certificates
+	apt-get install -y \
+		bash \
+		valgrind \
+		vim \
+		build-essential \
+		git \
+		curl \
+		wget \
+		tar \
+		gzip \
+		unzip \
+		ca-certificates
 
 # Set the working directory
 WORKDIR /workspace
