@@ -45,4 +45,4 @@ else
 fi
 
 echo "Installation complete. Run 'ubuntu-docker' in your terminal."
-echo "NOTE: You might have to restart your terminal or source your profile."
+echo "NOTE: You will have to restart your terminal or source your profile via 'source ~/YOUR_PROFILE' (e.g. source ~/.bashrc)."
