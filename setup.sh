@@ -1,8 +1,8 @@
 #!/bin/bash
 
-IMAGE_NAME="alpine-docker"
-REPO_URL="https://github.com/RealConrad/alpine-valgrind-docker.git"
-REPO_DIR="$HOME/alpine-valgrind-docker"
+IMAGE_NAME="ubuntu-docker"
+REPO_URL="https://github.com/RealConrad/ubuntu-valgrind-docker.git"
+REPO_DIR="$HOME/ubuntu-valgrind-docker"
 
 # Check if the Docker image already exists
 if [[ "$(docker images -q $IMAGE_NAME 2> /dev/null)" == "" ]]; then
@@ -37,13 +37,13 @@ else
 fi
 
 # Add an alias
-if ! grep -q 'alias alpine-docker=' "$PROFILE"; then
-	echo -e "\nalias alpine-docker=\"$HOME/alpine-valgrind-docker/run-alpine-docker.sh\"\n" >> $PROFILE
-	echo "Created alias 'alpine-docker'."
+if ! grep -q 'alias ubuntu-docker=' "$PROFILE"; then
+	echo -e "\nalias ubuntu-docker=\"$HOME/ubuntu-valgrind-docker/run-ubuntu-docker.sh\"\n" >> $PROFILE
+	echo "Created alias 'ubuntu-docker'."
 	echo "source $PROFILE"
 else
-	echo "Alias 'alpine-docker' already set up in $PROFILE."
+	echo "Alias 'ubuntu-docker' already set up in $PROFILE."
 fi
 
-echo "Installation complete. Run 'alpine-docker' in your terminal."
+echo "Installation complete. Run 'ubuntu-docker' in your terminal."
 echo "NOTE: You might have to restart your terminal or source your profile."
