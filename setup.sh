@@ -40,7 +40,6 @@ fi
 if ! grep -q 'alias ubuntu-docker=' "$PROFILE"; then
 	echo -e "\nalias ubuntu-docker=\"$HOME/ubuntu-valgrind-docker/run-ubuntu-docker.sh\"\n" >> $PROFILE
 	echo "Created alias 'ubuntu-docker'."
-	echo "source $PROFILE"
 else
 	echo "Alias 'ubuntu-docker' already set up in $PROFILE."
 fi
