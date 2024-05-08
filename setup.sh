@@ -40,7 +40,7 @@ fi
 if ! grep -q 'alias alpine-docker=' "$PROFILE"; then
 	echo "alias alpine-docker='docker run -it -v $HOME:/workspace $IMAGE_NAME'" >> $PROFILE
 	echo "Created alias 'alpine-docker'."
-	echo source $PROFILE
+	echo "source $PROFILE"
 else
 	echo "Alias 'alpine-docker' already set up in $PROFILE."
 fi
